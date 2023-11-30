@@ -1,3 +1,6 @@
+using Newtonsoft.Json;
+using System.Text;
+
 namespace ArgysDesktop
 {
     public partial class Login : Form
@@ -23,17 +26,37 @@ namespace ArgysDesktop
             }
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private async void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (textEmail.Text == "admin@admin.com" && textPassword.Text == "admin")
-            {
-                Home home = new Home();
-                home.Show();
 
-                this.Hide();
-            } else
+            string apiUrl = "http://localhost:5296/api/auth";
+
+            using (HttpClient client = new HttpClient())
             {
-                MessageBox.Show("E-mail ou senha incorretos.", "Argys Technology", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    var data = new
+                    {
+                        email = textEmail.Text,
+                        senha = textPassword.Text,
+                    };
+
+                    string dataJson = JsonConvert.SerializeObject(data);
+                    StringContent dataContent = new StringContent(dataJson, Encoding.UTF8, "application/json");
+
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, dataContent);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Home home = new Home();
+                        home.Show();
+
+                        this.Hide();
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro na requisição: {ex.Message}");
+                }
             }
         }
     }
