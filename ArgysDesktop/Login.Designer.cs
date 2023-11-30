@@ -33,7 +33,7 @@
             label2 = new Label();
             textEmail = new TextBox();
             textPassword = new TextBox();
-            buttonLogin = new Button();
+            ButtonLogin = new Button();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -77,15 +77,15 @@
             textPassword.Size = new Size(354, 23);
             textPassword.TabIndex = 3;
             // 
-            // buttonLogin
+            // ButtonLogin
             // 
-            buttonLogin.Location = new Point(175, 287);
-            buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(230, 23);
-            buttonLogin.TabIndex = 4;
-            buttonLogin.Text = "Login";
-            buttonLogin.UseVisualStyleBackColor = true;
-            buttonLogin.Click += buttonLogin_Click;
+            ButtonLogin.Location = new Point(175, 287);
+            ButtonLogin.Name = "ButtonLogin";
+            ButtonLogin.Size = new Size(230, 23);
+            ButtonLogin.TabIndex = 4;
+            ButtonLogin.Text = "Login";
+            ButtonLogin.UseVisualStyleBackColor = true;
+            ButtonLogin.Click += ButtonLogin_Click;
             // 
             // pictureBox1
             // 
@@ -105,7 +105,7 @@
             groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(buttonLogin);
+            groupBox1.Controls.Add(ButtonLogin);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textPassword);
             groupBox1.Controls.Add(textEmail);
@@ -115,7 +115,7 @@
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -123,7 +123,7 @@
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
@@ -139,7 +139,7 @@
         private Label label2;
         private TextBox textEmail;
         private TextBox textPassword;
-        private Button buttonLogin;
+        private Button ButtonLogin;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
     }

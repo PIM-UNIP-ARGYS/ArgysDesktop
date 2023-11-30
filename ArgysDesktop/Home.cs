@@ -16,5 +16,51 @@ namespace ArgysDesktop
         {
             InitializeComponent();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            this.Text = "Argys Technology - Home";
+        }
+
+        private void trabalhadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabelasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void dadosPessoaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Pessoa pessoa = new Pessoa();
+            pessoa.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

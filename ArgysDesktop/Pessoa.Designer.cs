@@ -1,6 +1,6 @@
 ﻿namespace ArgysDesktop
 {
-    partial class Home
+    partial class Pessoa
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
+            homeToolStripMenuItem = new ToolStripMenuItem();
             mANUTENÇÃOToolStripMenuItem = new ToolStripMenuItem();
             dadosPessoaisToolStripMenuItem = new ToolStripMenuItem();
             vínculoToolStripMenuItem = new ToolStripMenuItem();
@@ -40,8 +41,9 @@
             históricoDeCálculosToolStripMenuItem = new ToolStripMenuItem();
             uSUÁRIOToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            homeToolStripMenuItem = new ToolStripMenuItem();
+            pessoaGrid = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pessoaGrid).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -50,9 +52,14 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1449, 24);
-            menuStrip1.TabIndex = 1;
+            menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            // 
+            // homeToolStripMenuItem
+            // 
+            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            homeToolStripMenuItem.Size = new Size(54, 20);
+            homeToolStripMenuItem.Text = "HOME";
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -64,14 +71,13 @@
             // dadosPessoaisToolStripMenuItem
             // 
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
-            dadosPessoaisToolStripMenuItem.Size = new Size(180, 22);
+            dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
-            dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
-            vínculoToolStripMenuItem.Size = new Size(180, 22);
+            vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
             // 
             // tabelasToolStripMenuItem
@@ -80,7 +86,6 @@
             tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             tabelasToolStripMenuItem.Size = new Size(65, 20);
             tabelasToolStripMenuItem.Text = "TABELAS";
-            tabelasToolStripMenuItem.Click += tabelasToolStripMenuItem_Click_1;
             // 
             // cargoToolStripMenuItem
             // 
@@ -125,37 +130,42 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // homeToolStripMenuItem
+            // pessoaGrid
             // 
-            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            homeToolStripMenuItem.Size = new Size(54, 20);
-            homeToolStripMenuItem.Text = "HOME";
-            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
+            pessoaGrid.AllowUserToOrderColumns = true;
+            pessoaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            pessoaGrid.Dock = DockStyle.Fill;
+            pessoaGrid.Location = new Point(0, 24);
+            pessoaGrid.Name = "pessoaGrid";
+            pessoaGrid.RowTemplate.Height = 25;
+            pessoaGrid.Size = new Size(1449, 799);
+            pessoaGrid.TabIndex = 3;
+            pessoaGrid.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Home
+            // Pessoa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Window;
             ClientSize = new Size(1449, 823);
+            Controls.Add(pessoaGrid);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
-            Name = "Home";
+            Name = "Pessoa";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Home";
-            Load += Home_Load;
+            Text = "Pessoa";
+            Load += Pessoa_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pessoaGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem homeToolStripMenuItem;
         private ToolStripMenuItem mANUTENÇÃOToolStripMenuItem;
         private ToolStripMenuItem dadosPessoaisToolStripMenuItem;
         private ToolStripMenuItem vínculoToolStripMenuItem;
@@ -167,6 +177,14 @@
         private ToolStripMenuItem históricoDeCálculosToolStripMenuItem;
         private ToolStripMenuItem uSUÁRIOToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private ToolStripMenuItem homeToolStripMenuItem;
+        private DataGridView pessoaGrid;
+        private DataGridViewTextBoxColumn codigo;
+        private DataGridViewTextBoxColumn nome;
+        private DataGridViewTextBoxColumn rg;
+        private DataGridViewTextBoxColumn ctps;
+        private DataGridViewTextBoxColumn cpf;
+        private DataGridViewTextBoxColumn pisNis;
+        private DataGridViewTextBoxColumn tituloEleitor;
+        private DataGridViewTextBoxColumn dataNascimento;
     }
 }

@@ -26,7 +26,7 @@ namespace ArgysDesktop
             }
         }
 
-        private async void buttonLogin_Click(object sender, EventArgs e)
+        private async void ButtonLogin_Click(object sender, EventArgs e)
         {
 
             string apiUrl = "http://localhost:5296/api/auth";
@@ -53,7 +53,12 @@ namespace ArgysDesktop
 
                         this.Hide();
                     }
-                } catch (Exception ex)
+                    else
+                    {
+                        MessageBox.Show("Usuário ou senha estão incorretos");
+                    }
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show($"Erro na requisição: {ex.Message}");
                 }
