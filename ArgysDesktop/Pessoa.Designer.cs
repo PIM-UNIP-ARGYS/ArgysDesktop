@@ -42,8 +42,11 @@
             uSUÁRIOToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             pessoaGrid = new DataGridView();
+            panel1 = new Panel();
+            ButtonCreate = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pessoaGrid).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +54,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, mANUTENÇÃOToolStripMenuItem, tabelasToolStripMenuItem, pROCESSOSToolStripMenuItem, uSUÁRIOToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1449, 24);
+            menuStrip1.Size = new Size(1058, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -134,20 +137,39 @@
             // pessoaGrid
             // 
             pessoaGrid.AllowUserToOrderColumns = true;
+            pessoaGrid.BackgroundColor = SystemColors.Window;
             pessoaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            pessoaGrid.Dock = DockStyle.Fill;
-            pessoaGrid.Location = new Point(0, 24);
+            pessoaGrid.Location = new Point(0, 58);
             pessoaGrid.Name = "pessoaGrid";
             pessoaGrid.RowTemplate.Height = 25;
-            pessoaGrid.Size = new Size(1449, 799);
+            pessoaGrid.Size = new Size(1058, 450);
             pessoaGrid.TabIndex = 3;
             pessoaGrid.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(ButtonCreate);
+            panel1.Location = new Point(0, 27);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1058, 27);
+            panel1.TabIndex = 4;
+            // 
+            // ButtonCreate
+            // 
+            ButtonCreate.Location = new Point(959, 2);
+            ButtonCreate.Name = "ButtonCreate";
+            ButtonCreate.Size = new Size(75, 23);
+            ButtonCreate.TabIndex = 0;
+            ButtonCreate.Text = "Adicionar";
+            ButtonCreate.UseVisualStyleBackColor = true;
+            ButtonCreate.Click += ButtonCreate_Click;
             // 
             // Pessoa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1449, 823);
+            ClientSize = new Size(1058, 508);
+            Controls.Add(panel1);
             Controls.Add(pessoaGrid);
             Controls.Add(menuStrip1);
             MaximizeBox = false;
@@ -158,6 +180,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pessoaGrid).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +209,7 @@
         private DataGridViewTextBoxColumn pisNis;
         private DataGridViewTextBoxColumn tituloEleitor;
         private DataGridViewTextBoxColumn dataNascimento;
+        private Panel panel1;
+        private Button ButtonCreate;
     }
 }

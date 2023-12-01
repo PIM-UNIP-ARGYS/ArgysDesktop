@@ -65,5 +65,13 @@ namespace ArgysDesktop
                 }
             }
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            PessoaCreate pessoaCreate = new PessoaCreate();
+            pessoaCreate.Show();
+        }
     }
 }
