@@ -113,5 +113,13 @@ namespace ArgysDesktop
                 }
             }
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            VinculoCreate vinculoCreate = new VinculoCreate();
+            vinculoCreate.Show();
+        }
     }
 }

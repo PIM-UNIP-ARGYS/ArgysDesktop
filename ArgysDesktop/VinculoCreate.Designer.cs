@@ -45,25 +45,25 @@
             ButtonBack = new Button();
             ButtonSave = new Button();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            TextNomeSocial = new TextBox();
-            label1 = new Label();
-            TextNome = new TextBox();
             label12 = new Label();
             textBox13 = new TextBox();
+            label2 = new Label();
+            pessoa = new TextBox();
+            label1 = new Label();
+            TextNome = new TextBox();
             tabPage1 = new TabPage();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            maskedTextBox1 = new MaskedTextBox();
-            label9 = new Label();
-            label8 = new Label();
-            comboBox3 = new ComboBox();
+            salario = new TextBox();
+            cargo = new TextBox();
+            cbo = new TextBox();
+            dtAdmissao = new MaskedTextBox();
             label7 = new Label();
-            textBox14 = new TextBox();
-            maskedTextBox13 = new MaskedTextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
+            tipoPagamento = new ComboBox();
+            label8 = new Label();
+            label9 = new Label();
+            dtFgts = new MaskedTextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             tabControl1 = new TabControl();
             menuStrip1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -175,6 +175,7 @@
             ButtonBack.TabIndex = 1;
             ButtonBack.Text = "Voltar";
             ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
             // 
             // ButtonSave
             // 
@@ -184,13 +185,14 @@
             ButtonSave.TabIndex = 0;
             ButtonSave.Text = "Salvar";
             ButtonSave.UseVisualStyleBackColor = true;
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label12);
             groupBox1.Controls.Add(textBox13);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(TextNomeSocial);
+            groupBox1.Controls.Add(pessoa);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(TextNome);
             groupBox1.Location = new Point(12, 20);
@@ -198,40 +200,6 @@
             groupBox1.Size = new Size(938, 121);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Trabalhador";
-            label2.Click += label2_Click;
-            // 
-            // TextNomeSocial
-            // 
-            TextNomeSocial.Location = new Point(6, 82);
-            TextNomeSocial.Name = "TextNomeSocial";
-            TextNomeSocial.Size = new Size(926, 23);
-            TextNomeSocial.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(97, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Matrícula eSocial";
-            // 
-            // TextNome
-            // 
-            TextNome.Enabled = false;
-            TextNome.Location = new Point(6, 34);
-            TextNome.Name = "TextNome";
-            TextNome.Size = new Size(212, 23);
-            TextNome.TabIndex = 0;
             // 
             // label12
             // 
@@ -250,17 +218,51 @@
             textBox13.Size = new Size(208, 23);
             textBox13.TabIndex = 4;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 64);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Trabalhador";
+            label2.Click += label2_Click;
+            // 
+            // pessoa
+            // 
+            pessoa.Location = new Point(6, 82);
+            pessoa.Name = "pessoa";
+            pessoa.Size = new Size(926, 23);
+            pessoa.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Matrícula eSocial";
+            // 
+            // TextNome
+            // 
+            TextNome.Enabled = false;
+            TextNome.Location = new Point(6, 34);
+            TextNome.Name = "TextNome";
+            TextNome.Size = new Size(212, 23);
+            TextNome.TabIndex = 0;
+            // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(textBox16);
-            tabPage1.Controls.Add(textBox15);
-            tabPage1.Controls.Add(textBox14);
-            tabPage1.Controls.Add(maskedTextBox13);
+            tabPage1.Controls.Add(salario);
+            tabPage1.Controls.Add(cargo);
+            tabPage1.Controls.Add(cbo);
+            tabPage1.Controls.Add(dtAdmissao);
             tabPage1.Controls.Add(label7);
-            tabPage1.Controls.Add(comboBox3);
+            tabPage1.Controls.Add(tipoPagamento);
             tabPage1.Controls.Add(label8);
             tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(maskedTextBox1);
+            tabPage1.Controls.Add(dtFgts);
             tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(label3);
@@ -272,68 +274,35 @@
             tabPage1.Text = "Dados Gerais";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // salario
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(9, 6);
-            label3.Name = "label3";
-            label3.Size = new Size(31, 15);
-            label3.TabIndex = 1;
-            label3.Text = "CBO";
+            salario.Location = new Point(269, 95);
+            salario.Name = "salario";
+            salario.Size = new Size(208, 23);
+            salario.TabIndex = 24;
             // 
-            // label4
+            // cargo
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(272, 6);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Data de admissão";
+            cargo.Location = new Point(6, 95);
+            cargo.Name = "cargo";
+            cargo.Size = new Size(208, 23);
+            cargo.TabIndex = 23;
             // 
-            // label5
+            // cbo
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(535, 6);
-            label5.Name = "label5";
-            label5.Size = new Size(112, 15);
-            label5.TabIndex = 5;
-            label5.Text = "Data de opção FGTS";
+            cbo.Location = new Point(6, 21);
+            cbo.Name = "cbo";
+            cbo.Size = new Size(208, 23);
+            cbo.TabIndex = 21;
             // 
-            // maskedTextBox1
+            // dtAdmissao
             // 
-            maskedTextBox1.Location = new Point(532, 21);
-            maskedTextBox1.Mask = "00/00/0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(208, 23);
-            maskedTextBox1.TabIndex = 8;
-            maskedTextBox1.ValidatingType = typeof(DateTime);
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(9, 80);
-            label9.Name = "label9";
-            label9.Size = new Size(39, 15);
-            label9.TabIndex = 10;
-            label9.Text = "Cargo";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(272, 80);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 15);
-            label8.TabIndex = 12;
-            label8.Text = "Salário";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Mensal" });
-            comboBox3.Location = new Point(532, 95);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(208, 23);
-            comboBox3.TabIndex = 13;
+            dtAdmissao.Location = new Point(269, 21);
+            dtAdmissao.Mask = "00/00/0000";
+            dtAdmissao.Name = "dtAdmissao";
+            dtAdmissao.Size = new Size(208, 23);
+            dtAdmissao.TabIndex = 22;
+            dtAdmissao.ValidatingType = typeof(DateTime);
             // 
             // label7
             // 
@@ -344,35 +313,68 @@
             label7.TabIndex = 14;
             label7.Text = "Tipo de pagamento";
             // 
-            // textBox14
+            // tipoPagamento
             // 
-            textBox14.Location = new Point(6, 21);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(208, 23);
-            textBox14.TabIndex = 21;
+            tipoPagamento.FormattingEnabled = true;
+            tipoPagamento.Items.AddRange(new object[] { "Mensal" });
+            tipoPagamento.Location = new Point(535, 95);
+            tipoPagamento.Name = "tipoPagamento";
+            tipoPagamento.Size = new Size(208, 23);
+            tipoPagamento.TabIndex = 13;
             // 
-            // maskedTextBox13
+            // label8
             // 
-            maskedTextBox13.Location = new Point(269, 21);
-            maskedTextBox13.Mask = "00/00/0000";
-            maskedTextBox13.Name = "maskedTextBox13";
-            maskedTextBox13.Size = new Size(208, 23);
-            maskedTextBox13.TabIndex = 22;
-            maskedTextBox13.ValidatingType = typeof(DateTime);
+            label8.AutoSize = true;
+            label8.Location = new Point(272, 80);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 15);
+            label8.TabIndex = 12;
+            label8.Text = "Salário";
             // 
-            // textBox15
+            // label9
             // 
-            textBox15.Location = new Point(6, 95);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(208, 23);
-            textBox15.TabIndex = 23;
+            label9.AutoSize = true;
+            label9.Location = new Point(9, 80);
+            label9.Name = "label9";
+            label9.Size = new Size(39, 15);
+            label9.TabIndex = 10;
+            label9.Text = "Cargo";
             // 
-            // textBox16
+            // dtFgts
             // 
-            textBox16.Location = new Point(269, 95);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(208, 23);
-            textBox16.TabIndex = 24;
+            dtFgts.Location = new Point(535, 24);
+            dtFgts.Mask = "00/00/0000";
+            dtFgts.Name = "dtFgts";
+            dtFgts.Size = new Size(208, 23);
+            dtFgts.TabIndex = 8;
+            dtFgts.ValidatingType = typeof(DateTime);
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(535, 6);
+            label5.Name = "label5";
+            label5.Size = new Size(112, 15);
+            label5.TabIndex = 5;
+            label5.Text = "Data de opção FGTS";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(272, 6);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 15);
+            label4.TabIndex = 3;
+            label4.Text = "Data de admissão";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(9, 6);
+            label3.Name = "label3";
+            label3.Size = new Size(31, 15);
+            label3.TabIndex = 1;
+            label3.Text = "CBO";
             // 
             // tabControl1
             // 
@@ -383,7 +385,7 @@
             tabControl1.Size = new Size(1034, 342);
             tabControl1.TabIndex = 9;
             // 
-            // Vinculo
+            // VinculoCreate
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -393,9 +395,10 @@
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
             MaximizeBox = false;
-            Name = "Vinculo";
+            Name = "VinculoCreate";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Vinculo";
+            Load += VinculoCreate_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -428,21 +431,21 @@
         private Button ButtonSave;
         private GroupBox groupBox1;
         private Label label2;
-        private TextBox TextNomeSocial;
+        private TextBox pessoa;
         private Label label1;
         private TextBox TextNome;
         private Label label12;
         private TextBox textBox13;
         private TabPage tabPage1;
-        private TextBox textBox16;
-        private TextBox textBox15;
-        private TextBox textBox14;
-        private MaskedTextBox maskedTextBox13;
+        private TextBox salario;
+        private TextBox cargo;
+        private TextBox cbo;
+        private MaskedTextBox dtAdmissao;
         private Label label7;
-        private ComboBox comboBox3;
+        private ComboBox tipoPagamento;
         private Label label8;
         private Label label9;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox dtFgts;
         private Label label5;
         private Label label4;
         private Label label3;
