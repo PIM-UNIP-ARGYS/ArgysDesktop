@@ -43,10 +43,10 @@
             sairToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             ButtonCreate = new Button();
-            pessoaGrid = new DataGridView();
+            vinculoGrid = new DataGridView();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vinculoGrid).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -63,6 +63,7 @@
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             homeToolStripMenuItem.Size = new Size(54, 20);
             homeToolStripMenuItem.Text = "HOME";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -76,6 +77,7 @@
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
             dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
+            dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
@@ -95,12 +97,14 @@
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
             cargoToolStripMenuItem.Size = new Size(106, 22);
             cargoToolStripMenuItem.Text = "Cargo";
+            cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
             cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
+            cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
             // pROCESSOSToolStripMenuItem
             // 
@@ -114,12 +118,14 @@
             calcularFolhaDePagamentoToolStripMenuItem.Name = "calcularFolhaDePagamentoToolStripMenuItem";
             calcularFolhaDePagamentoToolStripMenuItem.Size = new Size(229, 22);
             calcularFolhaDePagamentoToolStripMenuItem.Text = "Calcular Folha de Pagamento";
+            calcularFolhaDePagamentoToolStripMenuItem.Click += calcularFolhaDePagamentoToolStripMenuItem_Click;
             // 
             // históricoDeCálculosToolStripMenuItem
             // 
             históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
             históricoDeCálculosToolStripMenuItem.Size = new Size(229, 22);
             históricoDeCálculosToolStripMenuItem.Text = "Histórico de Cálculos";
+            históricoDeCálculosToolStripMenuItem.Click += históricoDeCálculosToolStripMenuItem_Click;
             // 
             // uSUÁRIOToolStripMenuItem
             // 
@@ -133,6 +139,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // panel1
             // 
@@ -151,16 +158,16 @@
             ButtonCreate.Text = "Adicionar";
             ButtonCreate.UseVisualStyleBackColor = true;
             // 
-            // pessoaGrid
+            // vinculoGrid
             // 
-            pessoaGrid.AllowUserToOrderColumns = true;
-            pessoaGrid.BackgroundColor = SystemColors.Window;
-            pessoaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            pessoaGrid.Location = new Point(0, 58);
-            pessoaGrid.Name = "pessoaGrid";
-            pessoaGrid.RowTemplate.Height = 25;
-            pessoaGrid.Size = new Size(1058, 450);
-            pessoaGrid.TabIndex = 6;
+            vinculoGrid.AllowUserToOrderColumns = true;
+            vinculoGrid.BackgroundColor = SystemColors.Window;
+            vinculoGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            vinculoGrid.Location = new Point(0, 58);
+            vinculoGrid.Name = "vinculoGrid";
+            vinculoGrid.RowTemplate.Height = 25;
+            vinculoGrid.Size = new Size(1058, 450);
+            vinculoGrid.TabIndex = 6;
             // 
             // Vinculo
             // 
@@ -168,14 +175,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 508);
             Controls.Add(panel1);
-            Controls.Add(pessoaGrid);
+            Controls.Add(vinculoGrid);
             Controls.Add(menuStrip1);
+            MaximizeBox = false;
             Name = "Vinculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Vinculo";
+            Load += Vinculo_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vinculoGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,6 +207,6 @@
         private ToolStripMenuItem sairToolStripMenuItem;
         private Panel panel1;
         private Button ButtonCreate;
-        private DataGridView pessoaGrid;
+        private DataGridView vinculoGrid;
     }
 }

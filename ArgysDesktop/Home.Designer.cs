@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
+            homeToolStripMenuItem = new ToolStripMenuItem();
             mANUTENÇÃOToolStripMenuItem = new ToolStripMenuItem();
             dadosPessoaisToolStripMenuItem = new ToolStripMenuItem();
             vínculoToolStripMenuItem = new ToolStripMenuItem();
@@ -40,7 +41,6 @@
             históricoDeCálculosToolStripMenuItem = new ToolStripMenuItem();
             uSUÁRIOToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            homeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,10 +49,17 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, mANUTENÇÃOToolStripMenuItem, tabelasToolStripMenuItem, pROCESSOSToolStripMenuItem, uSUÁRIOToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1449, 24);
+            menuStrip1.Size = new Size(878, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            // 
+            // homeToolStripMenuItem
+            // 
+            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            homeToolStripMenuItem.Size = new Size(54, 20);
+            homeToolStripMenuItem.Text = "HOME";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -64,15 +71,16 @@
             // dadosPessoaisToolStripMenuItem
             // 
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
-            dadosPessoaisToolStripMenuItem.Size = new Size(180, 22);
+            dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
             dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
-            vínculoToolStripMenuItem.Size = new Size(180, 22);
+            vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
+            vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
             // tabelasToolStripMenuItem
             // 
@@ -87,12 +95,14 @@
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
             cargoToolStripMenuItem.Size = new Size(106, 22);
             cargoToolStripMenuItem.Text = "Cargo";
+            cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
             cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
+            cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
             // pROCESSOSToolStripMenuItem
             // 
@@ -106,12 +116,14 @@
             calcularFolhaDePagamentoToolStripMenuItem.Name = "calcularFolhaDePagamentoToolStripMenuItem";
             calcularFolhaDePagamentoToolStripMenuItem.Size = new Size(229, 22);
             calcularFolhaDePagamentoToolStripMenuItem.Text = "Calcular Folha de Pagamento";
+            calcularFolhaDePagamentoToolStripMenuItem.Click += calcularFolhaDePagamentoToolStripMenuItem_Click;
             // 
             // históricoDeCálculosToolStripMenuItem
             // 
             históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
             históricoDeCálculosToolStripMenuItem.Size = new Size(229, 22);
             históricoDeCálculosToolStripMenuItem.Text = "Histórico de Cálculos";
+            históricoDeCálculosToolStripMenuItem.Click += históricoDeCálculosToolStripMenuItem_Click;
             // 
             // uSUÁRIOToolStripMenuItem
             // 
@@ -127,19 +139,12 @@
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // homeToolStripMenuItem
-            // 
-            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            homeToolStripMenuItem.Size = new Size(54, 20);
-            homeToolStripMenuItem.Text = "HOME";
-            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
-            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(1449, 823);
+            ClientSize = new Size(878, 384);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;

@@ -63,6 +63,7 @@
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             homeToolStripMenuItem.Size = new Size(54, 20);
             homeToolStripMenuItem.Text = "HOME";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -76,12 +77,14 @@
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
             dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
+            dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
             vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
+            vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
             // tabelasToolStripMenuItem
             // 
@@ -95,12 +98,14 @@
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
             cargoToolStripMenuItem.Size = new Size(106, 22);
             cargoToolStripMenuItem.Text = "Cargo";
+            cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
             cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
+            cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
             // pROCESSOSToolStripMenuItem
             // 
@@ -114,12 +119,14 @@
             calcularFolhaDePagamentoToolStripMenuItem.Name = "calcularFolhaDePagamentoToolStripMenuItem";
             calcularFolhaDePagamentoToolStripMenuItem.Size = new Size(229, 22);
             calcularFolhaDePagamentoToolStripMenuItem.Text = "Calcular Folha de Pagamento";
+            calcularFolhaDePagamentoToolStripMenuItem.Click += calcularFolhaDePagamentoToolStripMenuItem_Click;
             // 
             // históricoDeCálculosToolStripMenuItem
             // 
             históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
             históricoDeCálculosToolStripMenuItem.Size = new Size(229, 22);
             históricoDeCálculosToolStripMenuItem.Text = "Histórico de Cálculos";
+            históricoDeCálculosToolStripMenuItem.Click += históricoDeCálculosToolStripMenuItem_Click;
             // 
             // uSUÁRIOToolStripMenuItem
             // 
@@ -131,8 +138,9 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(93, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // pessoaGrid
             // 

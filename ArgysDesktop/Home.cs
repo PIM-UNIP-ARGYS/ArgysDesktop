@@ -62,5 +62,42 @@ namespace ArgysDesktop
         {
 
         }
+
+        private void vínculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Vinculo vinculo = new Vinculo();
+            vinculo.Show();
+        }
+
+        private void cargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Cargo cargo = new Cargo();
+            cargo.Show();
+        }
+
+        private void cBOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Cbo cbo = new Cbo();
+            cbo.Show();
+        }
+
+        private void calcularFolhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CalcFP calcFP = new CalcFP();
+            calcFP.Show();
+        }
+
+        private void históricoDeCálculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HistoricoFp historicoFp = new HistoricoFp();
+            historicoFp.Show();
+        }
     }
 }

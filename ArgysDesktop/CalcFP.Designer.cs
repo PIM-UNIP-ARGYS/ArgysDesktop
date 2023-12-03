@@ -44,10 +44,10 @@
             groupBox2 = new GroupBox();
             ButtonSave = new Button();
             groupBox1 = new GroupBox();
+            maskedTextBox1 = new MaskedTextBox();
             label3 = new Label();
             label1 = new Label();
             TextNome = new TextBox();
-            maskedTextBox1 = new MaskedTextBox();
             menuStrip1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -67,6 +67,7 @@
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             homeToolStripMenuItem.Size = new Size(54, 20);
             homeToolStripMenuItem.Text = "HOME";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -78,14 +79,16 @@
             // dadosPessoaisToolStripMenuItem
             // 
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
-            dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
+            dadosPessoaisToolStripMenuItem.Size = new Size(180, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
+            dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
-            vínculoToolStripMenuItem.Size = new Size(154, 22);
+            vínculoToolStripMenuItem.Size = new Size(180, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
+            vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
             // tabelasToolStripMenuItem
             // 
@@ -97,14 +100,16 @@
             // cargoToolStripMenuItem
             // 
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            cargoToolStripMenuItem.Size = new Size(106, 22);
+            cargoToolStripMenuItem.Size = new Size(180, 22);
             cargoToolStripMenuItem.Text = "Cargo";
+            cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
-            cBOToolStripMenuItem.Size = new Size(106, 22);
+            cBOToolStripMenuItem.Size = new Size(180, 22);
             cBOToolStripMenuItem.Text = "CBO";
+            cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
             // pROCESSOSToolStripMenuItem
             // 
@@ -124,6 +129,7 @@
             históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
             históricoDeCálculosToolStripMenuItem.Size = new Size(229, 22);
             históricoDeCálculosToolStripMenuItem.Text = "Histórico de Cálculos";
+            históricoDeCálculosToolStripMenuItem.Click += históricoDeCálculosToolStripMenuItem_Click;
             // 
             // uSUÁRIOToolStripMenuItem
             // 
@@ -131,12 +137,14 @@
             uSUÁRIOToolStripMenuItem.Name = "uSUÁRIOToolStripMenuItem";
             uSUÁRIOToolStripMenuItem.Size = new Size(68, 20);
             uSUÁRIOToolStripMenuItem.Text = "USUÁRIO";
+            uSUÁRIOToolStripMenuItem.Click += uSUÁRIOToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(93, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // groupBox2
             // 
@@ -168,6 +176,14 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(766, 33);
+            maskedTextBox1.Mask = "00/0000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(166, 23);
+            maskedTextBox1.TabIndex = 6;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -192,14 +208,6 @@
             TextNome.Name = "TextNome";
             TextNome.Size = new Size(754, 23);
             TextNome.TabIndex = 0;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Location = new Point(766, 33);
-            maskedTextBox1.Mask = "00/0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(166, 23);
-            maskedTextBox1.TabIndex = 6;
             // 
             // CalcFP
             // 

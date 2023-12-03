@@ -43,10 +43,10 @@
             sairToolStripMenuItem = new ToolStripMenuItem();
             ButtonCreate = new Button();
             panel1 = new Panel();
-            pessoaGrid = new DataGridView();
+            cargoGrid = new DataGridView();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cargoGrid).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -63,6 +63,7 @@
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             homeToolStripMenuItem.Size = new Size(54, 20);
             homeToolStripMenuItem.Text = "HOME";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // mANUTENÇÃOToolStripMenuItem
             // 
@@ -76,12 +77,14 @@
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
             dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
+            dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
             vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
+            vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
             // tabelasToolStripMenuItem
             // 
@@ -101,6 +104,7 @@
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
             cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
+            cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
             // pROCESSOSToolStripMenuItem
             // 
@@ -114,12 +118,14 @@
             calcularFolhaDePagamentoToolStripMenuItem.Name = "calcularFolhaDePagamentoToolStripMenuItem";
             calcularFolhaDePagamentoToolStripMenuItem.Size = new Size(229, 22);
             calcularFolhaDePagamentoToolStripMenuItem.Text = "Calcular Folha de Pagamento";
+            calcularFolhaDePagamentoToolStripMenuItem.Click += calcularFolhaDePagamentoToolStripMenuItem_Click;
             // 
             // históricoDeCálculosToolStripMenuItem
             // 
             históricoDeCálculosToolStripMenuItem.Name = "históricoDeCálculosToolStripMenuItem";
             históricoDeCálculosToolStripMenuItem.Size = new Size(229, 22);
             históricoDeCálculosToolStripMenuItem.Text = "Histórico de Cálculos";
+            históricoDeCálculosToolStripMenuItem.Click += históricoDeCálculosToolStripMenuItem_Click;
             // 
             // uSUÁRIOToolStripMenuItem
             // 
@@ -133,6 +139,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // ButtonCreate
             // 
@@ -151,16 +158,16 @@
             panel1.Size = new Size(800, 27);
             panel1.TabIndex = 8;
             // 
-            // pessoaGrid
+            // cargoGrid
             // 
-            pessoaGrid.AllowUserToOrderColumns = true;
-            pessoaGrid.BackgroundColor = SystemColors.Window;
-            pessoaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            pessoaGrid.Location = new Point(0, 54);
-            pessoaGrid.Name = "pessoaGrid";
-            pessoaGrid.RowTemplate.Height = 25;
-            pessoaGrid.Size = new Size(800, 394);
-            pessoaGrid.TabIndex = 7;
+            cargoGrid.AllowUserToOrderColumns = true;
+            cargoGrid.BackgroundColor = SystemColors.Window;
+            cargoGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            cargoGrid.Location = new Point(0, 54);
+            cargoGrid.Name = "cargoGrid";
+            cargoGrid.RowTemplate.Height = 25;
+            cargoGrid.Size = new Size(800, 394);
+            cargoGrid.TabIndex = 7;
             // 
             // Cargo
             // 
@@ -168,14 +175,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Controls.Add(pessoaGrid);
+            Controls.Add(cargoGrid);
             Controls.Add(menuStrip1);
+            MaximizeBox = false;
             Name = "Cargo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cargo";
+            Load += Cargo_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cargoGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,6 +207,6 @@
         private ToolStripMenuItem sairToolStripMenuItem;
         private Button ButtonCreate;
         private Panel panel1;
-        private DataGridView pessoaGrid;
+        private DataGridView cargoGrid;
     }
 }
