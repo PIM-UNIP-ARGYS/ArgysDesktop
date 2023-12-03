@@ -45,12 +45,12 @@
             ButtonBack = new Button();
             ButtonSave = new Button();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            TextNomeSocial = new TextBox();
-            label1 = new Label();
-            TextNome = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            cbo = new TextBox();
+            label2 = new Label();
+            descricao = new TextBox();
+            label1 = new Label();
+            codigo = new TextBox();
             menuStrip1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -159,6 +159,7 @@
             ButtonBack.TabIndex = 1;
             ButtonBack.Text = "Voltar";
             ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
             // 
             // ButtonSave
             // 
@@ -168,52 +169,21 @@
             ButtonSave.TabIndex = 0;
             ButtonSave.Text = "Salvar";
             ButtonSave.UseVisualStyleBackColor = true;
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(cbo);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(TextNomeSocial);
+            groupBox1.Controls.Add(descricao);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(TextNome);
+            groupBox1.Controls.Add(codigo);
             groupBox1.Location = new Point(12, 27);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(938, 121);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(58, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Descrição";
-            // 
-            // TextNomeSocial
-            // 
-            TextNomeSocial.Location = new Point(6, 82);
-            TextNomeSocial.Name = "TextNomeSocial";
-            TextNomeSocial.Size = new Size(926, 23);
-            TextNomeSocial.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(46, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Código";
-            // 
-            // TextNome
-            // 
-            TextNome.Location = new Point(6, 33);
-            TextNome.Name = "TextNome";
-            TextNome.Size = new Size(157, 23);
-            TextNome.TabIndex = 0;
             // 
             // label3
             // 
@@ -224,12 +194,45 @@
             label3.TabIndex = 5;
             label3.Text = "CBO";
             // 
-            // textBox1
+            // cbo
             // 
-            textBox1.Location = new Point(188, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(744, 23);
-            textBox1.TabIndex = 4;
+            cbo.Location = new Point(188, 33);
+            cbo.Name = "cbo";
+            cbo.Size = new Size(744, 23);
+            cbo.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 64);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Descrição";
+            // 
+            // descricao
+            // 
+            descricao.Location = new Point(6, 82);
+            descricao.Name = "descricao";
+            descricao.Size = new Size(926, 23);
+            descricao.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Código";
+            // 
+            // codigo
+            // 
+            codigo.Enabled = false;
+            codigo.Location = new Point(6, 33);
+            codigo.Name = "codigo";
+            codigo.Size = new Size(157, 23);
+            codigo.TabIndex = 0;
             // 
             // CargoCreate
             // 
@@ -241,6 +244,7 @@
             Controls.Add(menuStrip1);
             Name = "CargoCreate";
             Text = "CargoCreate";
+            Load += CargoCreate_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -270,10 +274,10 @@
         private Button ButtonSave;
         private GroupBox groupBox1;
         private Label label2;
-        private TextBox TextNomeSocial;
+        private TextBox descricao;
         private Label label1;
-        private TextBox TextNome;
+        private TextBox codigo;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox cbo;
     }
 }

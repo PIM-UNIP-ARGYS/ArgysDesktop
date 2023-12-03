@@ -149,6 +149,7 @@
             ButtonCreate.TabIndex = 0;
             ButtonCreate.Text = "Adicionar";
             ButtonCreate.UseVisualStyleBackColor = true;
+            ButtonCreate.Click += ButtonCreate_Click;
             // 
             // panel1
             // 

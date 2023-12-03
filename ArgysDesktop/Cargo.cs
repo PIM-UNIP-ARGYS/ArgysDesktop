@@ -113,5 +113,13 @@ namespace ArgysDesktop
                 }
             }
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CargoCreate cargoCreate = new CargoCreate();
+            cargoCreate.Show();
+
+            this.Hide();
+        }
     }
 }

@@ -114,5 +114,13 @@ namespace ArgysDesktop
                 }
             }
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CboCreate cboCreate = new CboCreate();
+            cboCreate.Show();
+
+            this.Hide();
+        }
     }
 }

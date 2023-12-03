@@ -45,12 +45,12 @@
             ButtonBack = new Button();
             ButtonSave = new Button();
             groupBox1 = new GroupBox();
+            motoristaProfissional = new CheckBox();
+            salarioAula = new CheckBox();
             label2 = new Label();
-            TextNomeSocial = new TextBox();
+            descricao = new TextBox();
             label1 = new Label();
-            TextNome = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
+            codigo = new TextBox();
             menuStrip1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -159,6 +159,7 @@
             ButtonBack.TabIndex = 1;
             ButtonBack.Text = "Voltar";
             ButtonBack.UseVisualStyleBackColor = true;
+            ButtonBack.Click += ButtonBack_Click;
             // 
             // ButtonSave
             // 
@@ -168,20 +169,41 @@
             ButtonSave.TabIndex = 0;
             ButtonSave.Text = "Salvar";
             ButtonSave.UseVisualStyleBackColor = true;
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(checkBox2);
-            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(motoristaProfissional);
+            groupBox1.Controls.Add(salarioAula);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(TextNomeSocial);
+            groupBox1.Controls.Add(descricao);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(TextNome);
+            groupBox1.Controls.Add(codigo);
             groupBox1.Location = new Point(12, 27);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(938, 121);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
+            // 
+            // motoristaProfissional
+            // 
+            motoristaProfissional.AutoSize = true;
+            motoristaProfissional.Location = new Point(273, 35);
+            motoristaProfissional.Name = "motoristaProfissional";
+            motoristaProfissional.Size = new Size(150, 19);
+            motoristaProfissional.TabIndex = 17;
+            motoristaProfissional.Text = "É motorista profissional";
+            motoristaProfissional.UseVisualStyleBackColor = true;
+            // 
+            // salarioAula
+            // 
+            salarioAula.AutoSize = true;
+            salarioAula.Location = new Point(181, 35);
+            salarioAula.Name = "salarioAula";
+            salarioAula.Size = new Size(86, 19);
+            salarioAula.TabIndex = 16;
+            salarioAula.Text = "Salário aula";
+            salarioAula.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -192,12 +214,12 @@
             label2.TabIndex = 3;
             label2.Text = "Descrição";
             // 
-            // TextNomeSocial
+            // descricao
             // 
-            TextNomeSocial.Location = new Point(6, 82);
-            TextNomeSocial.Name = "TextNomeSocial";
-            TextNomeSocial.Size = new Size(926, 23);
-            TextNomeSocial.TabIndex = 2;
+            descricao.Location = new Point(6, 82);
+            descricao.Name = "descricao";
+            descricao.Size = new Size(926, 23);
+            descricao.TabIndex = 2;
             // 
             // label1
             // 
@@ -208,32 +230,13 @@
             label1.TabIndex = 1;
             label1.Text = "Código";
             // 
-            // TextNome
+            // codigo
             // 
-            TextNome.Location = new Point(6, 33);
-            TextNome.Name = "TextNome";
-            TextNome.Size = new Size(157, 23);
-            TextNome.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(181, 35);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(86, 19);
-            checkBox1.TabIndex = 16;
-            checkBox1.Text = "Salário aula";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(273, 35);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(150, 19);
-            checkBox2.TabIndex = 17;
-            checkBox2.Text = "É motorista profissional";
-            checkBox2.UseVisualStyleBackColor = true;
+            codigo.Enabled = false;
+            codigo.Location = new Point(6, 33);
+            codigo.Name = "codigo";
+            codigo.Size = new Size(157, 23);
+            codigo.TabIndex = 0;
             // 
             // CboCreate
             // 
@@ -245,6 +248,7 @@
             Controls.Add(menuStrip1);
             Name = "CboCreate";
             Text = "CboCreate";
+            Load += CboCreate_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -274,10 +278,10 @@
         private Button ButtonSave;
         private GroupBox groupBox1;
         private Label label2;
-        private TextBox TextNomeSocial;
+        private TextBox descricao;
         private Label label1;
-        private TextBox TextNome;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private TextBox codigo;
+        private CheckBox motoristaProfissional;
+        private CheckBox salarioAula;
     }
 }
