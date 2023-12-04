@@ -115,7 +115,7 @@ namespace ArgysDesktop
             }
         }
 
-        private void HistoricoFp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void historicoGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == historicoGrid.Columns["Download"].Index && e.RowIndex >= 0)
             {
@@ -144,5 +144,6 @@ namespace ArgysDesktop
                 MessageBox.Show("Erro ao baixar o PDF: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

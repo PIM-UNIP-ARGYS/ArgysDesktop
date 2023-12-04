@@ -148,6 +148,7 @@
             historicoGrid.RowTemplate.Height = 25;
             historicoGrid.Size = new Size(1058, 478);
             historicoGrid.TabIndex = 7;
+            historicoGrid.CellContentClick += historicoGrid_CellContentClick;
             // 
             // HistoricoFp
             // 
