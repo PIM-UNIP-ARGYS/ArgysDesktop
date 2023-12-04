@@ -41,9 +41,9 @@
             históricoDeCálculosToolStripMenuItem = new ToolStripMenuItem();
             uSUÁRIOToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            pessoaGrid = new DataGridView();
+            historicoGrid = new DataGridView();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)historicoGrid).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -72,14 +72,14 @@
             // dadosPessoaisToolStripMenuItem
             // 
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
-            dadosPessoaisToolStripMenuItem.Size = new Size(180, 22);
+            dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
             dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
-            vínculoToolStripMenuItem.Size = new Size(180, 22);
+            vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
             vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
@@ -93,14 +93,14 @@
             // cargoToolStripMenuItem
             // 
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            cargoToolStripMenuItem.Size = new Size(180, 22);
+            cargoToolStripMenuItem.Size = new Size(106, 22);
             cargoToolStripMenuItem.Text = "Cargo";
             cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
-            cBOToolStripMenuItem.Size = new Size(180, 22);
+            cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
             cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
@@ -134,33 +134,36 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // pessoaGrid
+            // historicoGrid
             // 
-            pessoaGrid.AllowUserToOrderColumns = true;
-            pessoaGrid.BackgroundColor = SystemColors.Window;
-            pessoaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            pessoaGrid.Location = new Point(0, 29);
-            pessoaGrid.Name = "pessoaGrid";
-            pessoaGrid.RowTemplate.Height = 25;
-            pessoaGrid.Size = new Size(1058, 478);
-            pessoaGrid.TabIndex = 7;
+            historicoGrid.AllowUserToOrderColumns = true;
+            historicoGrid.BackgroundColor = SystemColors.Window;
+            historicoGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            historicoGrid.Location = new Point(0, 29);
+            historicoGrid.Name = "historicoGrid";
+            historicoGrid.RowTemplate.Height = 25;
+            historicoGrid.Size = new Size(1058, 478);
+            historicoGrid.TabIndex = 7;
             // 
             // HistoricoFp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 508);
-            Controls.Add(pessoaGrid);
+            Controls.Add(historicoGrid);
             Controls.Add(menuStrip1);
+            MaximizeBox = false;
             Name = "HistoricoFp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HistoricoFp";
+            Load += HistoricoFp_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pessoaGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)historicoGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,6 +183,6 @@
         private ToolStripMenuItem históricoDeCálculosToolStripMenuItem;
         private ToolStripMenuItem uSUÁRIOToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private DataGridView pessoaGrid;
+        private DataGridView historicoGrid;
     }
 }

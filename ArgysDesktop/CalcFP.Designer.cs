@@ -44,7 +44,7 @@
             groupBox2 = new GroupBox();
             ButtonSave = new Button();
             groupBox1 = new GroupBox();
-            maskedTextBox1 = new MaskedTextBox();
+            referencia = new MaskedTextBox();
             label3 = new Label();
             label1 = new Label();
             TextNome = new TextBox();
@@ -79,14 +79,14 @@
             // dadosPessoaisToolStripMenuItem
             // 
             dadosPessoaisToolStripMenuItem.Name = "dadosPessoaisToolStripMenuItem";
-            dadosPessoaisToolStripMenuItem.Size = new Size(180, 22);
+            dadosPessoaisToolStripMenuItem.Size = new Size(154, 22);
             dadosPessoaisToolStripMenuItem.Text = "Dados Pessoais";
             dadosPessoaisToolStripMenuItem.Click += dadosPessoaisToolStripMenuItem_Click;
             // 
             // vínculoToolStripMenuItem
             // 
             vínculoToolStripMenuItem.Name = "vínculoToolStripMenuItem";
-            vínculoToolStripMenuItem.Size = new Size(180, 22);
+            vínculoToolStripMenuItem.Size = new Size(154, 22);
             vínculoToolStripMenuItem.Text = "Vínculo";
             vínculoToolStripMenuItem.Click += vínculoToolStripMenuItem_Click;
             // 
@@ -100,14 +100,14 @@
             // cargoToolStripMenuItem
             // 
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            cargoToolStripMenuItem.Size = new Size(180, 22);
+            cargoToolStripMenuItem.Size = new Size(106, 22);
             cargoToolStripMenuItem.Text = "Cargo";
             cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click;
             // 
             // cBOToolStripMenuItem
             // 
             cBOToolStripMenuItem.Name = "cBOToolStripMenuItem";
-            cBOToolStripMenuItem.Size = new Size(180, 22);
+            cBOToolStripMenuItem.Size = new Size(106, 22);
             cBOToolStripMenuItem.Text = "CBO";
             cBOToolStripMenuItem.Click += cBOToolStripMenuItem_Click;
             // 
@@ -142,7 +142,7 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -163,10 +163,11 @@
             ButtonSave.TabIndex = 0;
             ButtonSave.Text = "Gerar";
             ButtonSave.UseVisualStyleBackColor = true;
+            ButtonSave.Click += ButtonSave_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(maskedTextBox1);
+            groupBox1.Controls.Add(referencia);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(TextNome);
@@ -176,13 +177,13 @@
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
-            // maskedTextBox1
+            // referencia
             // 
-            maskedTextBox1.Location = new Point(766, 33);
-            maskedTextBox1.Mask = "00/0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(166, 23);
-            maskedTextBox1.TabIndex = 6;
+            referencia.Location = new Point(766, 33);
+            referencia.Mask = "00/0000";
+            referencia.Name = "referencia";
+            referencia.Size = new Size(166, 23);
+            referencia.TabIndex = 6;
             // 
             // label3
             // 
@@ -204,10 +205,12 @@
             // 
             // TextNome
             // 
+            TextNome.Enabled = false;
             TextNome.Location = new Point(6, 33);
             TextNome.Name = "TextNome";
             TextNome.Size = new Size(754, 23);
             TextNome.TabIndex = 0;
+            TextNome.Text = "Default";
             // 
             // CalcFP
             // 
@@ -217,8 +220,11 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
+            MaximizeBox = false;
             Name = "CalcFP";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CalcFP";
+            Load += CalcFP_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -249,6 +255,6 @@
         private Label label3;
         private Label label1;
         private TextBox TextNome;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox referencia;
     }
 }
