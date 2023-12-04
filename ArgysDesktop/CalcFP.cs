@@ -87,7 +87,7 @@ namespace ArgysDesktop
 
         private async void ButtonSave_Click(object sender, EventArgs e)
         {
-            string apiUrl = $"http://localhost:5296/api/folha_pagamento?referencia={referencia.Text}";
+            string apiUrl = $"https://argysapi.azurewebsites.net/api/folha_pagamento?referencia={referencia.Text}";
 
             using (HttpClient client = new HttpClient())
             {

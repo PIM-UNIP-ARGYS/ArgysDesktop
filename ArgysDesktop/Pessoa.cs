@@ -32,7 +32,7 @@ namespace ArgysDesktop
 
         private async Task GetDataApi()
         {
-            string apiUrl = "http://localhost:5296/api/pessoa";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/pessoa";
 
             using (HttpClient client = new HttpClient())
             {

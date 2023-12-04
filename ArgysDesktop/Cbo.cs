@@ -81,7 +81,7 @@ namespace ArgysDesktop
 
         private async Task GetDataApi()
         {
-            string apiUrl = "http://localhost:5296/api/cbo";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/cbo";
 
             using (HttpClient client = new HttpClient())
             {

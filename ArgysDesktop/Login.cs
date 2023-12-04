@@ -29,7 +29,7 @@ namespace ArgysDesktop
         private async void ButtonLogin_Click(object sender, EventArgs e)
         {
 
-            string apiUrl = "http://localhost:5296/api/auth";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/auth";
 
             using (HttpClient client = new HttpClient())
             {

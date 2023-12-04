@@ -80,7 +80,7 @@ namespace ArgysDesktop
 
         private async Task GetDataApi()
         {
-            string apiUrl = "http://localhost:5296/api/vinculo";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/vinculo";
 
             using (HttpClient client = new HttpClient())
             {

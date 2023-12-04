@@ -81,7 +81,7 @@ namespace ArgysDesktop
 
         private async Task GetDataApi()
         {
-            string apiUrl = "http://localhost:5296/api/folha_pagamento/historico";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/folha_pagamento/historico";
 
             using (HttpClient client = new HttpClient())
             {

@@ -36,7 +36,7 @@ namespace ArgysDesktop
 
         private async void ButtonSave_Click(object sender, EventArgs e)
         {
-            string apiUrl = "http://localhost:5296/api/cbo";
+            string apiUrl = "https://argysapi.azurewebsites.net/api/cbo";
 
             using (HttpClient client = new HttpClient())
             {
